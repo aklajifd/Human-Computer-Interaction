@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Quiz · Question Builder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="teal-surface builder-page">
+    <div class="builder-page__inner">
+      <nav class="page-nav" aria-label="Primary">
+        <a class="page-nav__link" href="quiz-dashboard.html">Return to Quizzes</a>
+        <a class="page-nav__link" href="index.html">Logout</a>
+      </nav>
+      <main class="builder-card" aria-labelledby="builder-heading">
+        <header class="builder-card__header">
+          <label class="builder-card__title-label visually-hidden" for="quiz-title">Enter quiz title...</label>
+          <input
+            class="builder-card__title-input"
+            type="text"
+            id="quiz-title"
+            name="quiz-title"
+            placeholder="Enter quiz title..."
+            value="Human Computer Interaction"
+          />
+        </header>
+        <form class="question-form" aria-labelledby="builder-heading">
+          <h1 id="builder-heading" class="visually-hidden">Quiz Question Builder</h1>
+          <div class="question-grid">
+            <section class="question-panel" aria-labelledby="question-type-label">
+              <h2 id="question-type-label" class="panel-title">Question Type</h2>
+              <div role="group" aria-labelledby="question-type-label" class="chip-toggle-group">
+                <button type="button" class="chip-toggle is-active">Multiple Choice</button>
+                <button type="button" class="chip-toggle">True / False</button>
+              </div>
+              <div class="panel-divider" role="presentation"></div>
+              <h2 class="panel-title" id="correct-answer-label">Correct Answer(s)</h2>
+              <ul class="answer-checklist" aria-labelledby="correct-answer-label">
+                <li>
+                  <label class="checkbox-pill">
+                    <input type="checkbox" name="correct-choice" checked />
+                    <span class="checkbox-pill__visual"></span>
+                    <span class="checkbox-pill__label">Lorem ipsum dolor</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox-pill">
+                    <input type="checkbox" name="correct-choice" />
+                    <span class="checkbox-pill__visual"></span>
+                    <span class="checkbox-pill__label">Lorem ipsum dolor</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox-pill">
+                    <input type="checkbox" name="correct-choice" />
+                    <span class="checkbox-pill__visual"></span>
+                    <span class="checkbox-pill__label">Lorem ipsum dolor</span>
+                  </label>
+                </li>
+                <li>
+                  <label class="checkbox-pill">
+                    <input type="checkbox" name="correct-choice" />
+                    <span class="checkbox-pill__visual"></span>
+                    <span class="checkbox-pill__label">Lorem ipsum dolor</span>
+                  </label>
+                </li>
+              </ul>
+            </section>
+            <section class="question-panel question-panel--content" aria-labelledby="question-content-label">
+              <h2 id="question-content-label" class="panel-title">Enter question...</h2>
+              <textarea
+                class="question-textarea"
+                name="question"
+                rows="3"
+                placeholder="Enter question...">Lorem ipsum dolor sit amet consectetur?</textarea>
+              <div class="panel-divider" role="presentation"></div>
+              <h2 class="panel-title" id="answer-choices-label">Answer Choices</h2>
+              <ul class="choice-list" aria-labelledby="answer-choices-label">
+                <li class="choice-item">
+                  <span class="choice-bullet" aria-hidden="true">A</span>
+                  <input
+                    type="text"
+                    class="choice-input"
+                    value="Lorem ipsum dolor sit amet consectetur"
+                    aria-label="Answer choice A"
+                  />
+                  <button type="button" class="choice-action" aria-label="Edit choice A">
+                    <span aria-hidden="true" class="icon-pencil"></span>
+                  </button>
+                </li>
+                <li class="choice-item">
+                  <span class="choice-bullet" aria-hidden="true">B</span>
+                  <input
+                    type="text"
+                    class="choice-input"
+                    value="Lorem ipsum dolor sit amet consectetur"
+                    aria-label="Answer choice B"
+                  />
+                  <button type="button" class="choice-action" aria-label="Edit choice B">
+                    <span aria-hidden="true" class="icon-pencil"></span>
+                  </button>
+                </li>
+                <li class="choice-item">
+                  <span class="choice-bullet" aria-hidden="true">C</span>
+                  <input
+                    type="text"
+                    class="choice-input"
+                    value="Lorem ipsum dolor sit amet consectetur"
+                    aria-label="Answer choice C"
+                  />
+                  <button type="button" class="choice-action" aria-label="Edit choice C">
+                    <span aria-hidden="true" class="icon-pencil"></span>
+                  </button>
+                </li>
+                <li class="choice-item">
+                  <span class="choice-bullet" aria-hidden="true">D</span>
+                  <input
+                    type="text"
+                    class="choice-input"
+                    value="Lorem ipsum dolor sit amet consectetur"
+                    aria-label="Answer choice D"
+                  />
+                  <button type="button" class="choice-action" aria-label="Edit choice D">
+                    <span aria-hidden="true" class="icon-pencil"></span>
+                  </button>
+                </li>
+              </ul>
+              <button type="button" class="add-choice-button">Add answer choice</button>
+            </section>
+          </div>
+          <footer class="builder-footer">
+            <div class="builder-footer__group">
+              <label class="footer-field" for="time-allowed">
+                <span class="footer-field__label">Time allowed:</span>
+                <select id="time-allowed" class="footer-select">
+                  <option>30s</option>
+                  <option>45s</option>
+                  <option selected>60s</option>
+                  <option>90s</option>
+                </select>
+              </label>
+              <label class="footer-toggle">
+                <input type="checkbox" checked />
+                <span class="footer-toggle__visual" aria-hidden="true"></span>
+                <span class="footer-toggle__label">Lock Question Upon Submitting</span>
+              </label>
+              <label class="footer-toggle">
+                <input type="checkbox" />
+                <span class="footer-toggle__visual" aria-hidden="true"></span>
+                <span class="footer-toggle__label">Enable Quiz Review</span>
+              </label>
+            </div>
+            <button type="submit" class="primary-button primary-button--save">Save</button>
+          </footer>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>

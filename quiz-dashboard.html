@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Human Computer Interaction · Quiz Overview</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="teal-surface results-page">
+    <div class="results-page__inner">
+      <nav class="page-nav" aria-label="Primary">
+        <a class="page-nav__link" href="course-selection.html">Return to Courses</a>
+        <a class="page-nav__link" href="index.html">Logout</a>
+      </nav>
+      <main class="results-card" aria-labelledby="course-title">
+        <header class="results-card__header">
+          <h1 id="course-title">Human Computer Interaction</h1>
+        </header>
+        <section class="chapter-section" aria-labelledby="chapter-1">
+          <div class="chapter-section__heading">
+            <h2 id="chapter-1">Chapter 1</h2>
+            <button class="download-button" type="button">
+              Download Results
+              <span class="download-button__icon" aria-hidden="true"></span>
+            </button>
+          </div>
+          <div class="results-table" role="table" aria-label="Chapter 1 quiz results">
+            <div class="results-table__header" role="row">
+              <span class="column-title" role="columnheader">Student Name</span>
+              <span class="column-title" role="columnheader">Quiz Taken</span>
+              <span class="column-title" role="columnheader">Total Correct</span>
+              <span class="column-title" role="columnheader">View Answers</span>
+            </div>
+            <div class="results-table__row" role="row">
+              <span class="student" role="cell">Joe Smith</span>
+              <span class="status" role="cell">
+                <span class="status-indicator status-indicator--complete" aria-hidden="true"></span>
+                <span class="status-text">10 / 10</span>
+              </span>
+              <span class="score" role="cell">10 / 10</span>
+              <span class="action" role="cell"><button class="link-button" type="button">See Results</button></span>
+            </div>
+            <div class="results-table__row" role="row">
+              <span class="student" role="cell">Kevin Smith</span>
+              <span class="status" role="cell">
+                <span class="status-indicator status-indicator--complete" aria-hidden="true"></span>
+                <span class="status-text">8 / 10</span>
+              </span>
+              <span class="score" role="cell">8 / 10</span>
+              <span class="action" role="cell"><button class="link-button" type="button">See Results</button></span>
+            </div>
+            <div class="results-table__row" role="row">
+              <span class="student" role="cell">Maggie Smith</span>
+              <span class="status" role="cell">
+                <span class="status-indicator status-indicator--complete" aria-hidden="true"></span>
+                <span class="status-text">6 / 10</span>
+              </span>
+              <span class="score" role="cell">6 / 10</span>
+              <span class="action" role="cell"><button class="link-button" type="button">See Results</button></span>
+            </div>
+            <div class="results-table__row" role="row">
+              <span class="student" role="cell">Wayne Smith</span>
+              <span class="status" role="cell">
+                <span class="status-indicator status-indicator--missing" aria-hidden="true"></span>
+                <span class="status-text">4 / 10</span>
+              </span>
+              <span class="score" role="cell">4 / 10</span>
+              <span class="action" role="cell"><button class="link-button" type="button">See Results</button></span>
+            </div>
+            <div class="results-table__row" role="row">
+              <span class="student" role="cell">Dedra Smith</span>
+              <span class="status" role="cell">
+                <span class="status-indicator status-indicator--pending" aria-hidden="true"></span>
+                <span class="status-text">—</span>
+              </span>
+              <span class="score" role="cell">—</span>
+              <span class="action" role="cell"><button class="link-button link-button--accent" type="button" data-target="quiz-chapter-qr.html">Start Quiz</button></span>
+            </div>
+          </div>
+        </section>
+        <section class="chapter-summary" aria-labelledby="chapter-2">
+          <h2 id="chapter-2">Chapter 2</h2>
+          <div class="chapter-summary__actions">
+            <button class="pill-button pill-button--accent" type="button" data-target="quiz-chapter-qr.html">Start Quiz</button>
+            <button class="pill-button pill-button--muted" type="button" disabled>Results Unavailable</button>
+          </div>
+        </section>
+        <section class="chapter-summary" aria-labelledby="chapter-3">
+          <h2 id="chapter-3">Chapter 3</h2>
+          <div class="chapter-summary__actions">
+            <button class="pill-button pill-button--accent" type="button" data-target="quiz-chapter-qr.html">Start Quiz</button>
+            <button class="pill-button pill-button--cool" type="button">See Results</button>
+          </div>
+        </section>
+        <div class="card-footer">
+          <button class="primary-button" type="button" id="create-quiz-button">Create New Quiz</button>
+        </div>
+      </main>
+    </div>
+    <script src="scripts/app.js" defer></script>
+  </body>
+</html>
