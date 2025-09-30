@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chapter 1 · Quiz Lobby</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="teal-surface chapter-stage">
+    <div class="chapter-stage__container">
+      <header class="chapter-stage__header" aria-label="Chapter navigation">
+        <div class="chapter-stage__heading">Chapter 1</div>
+        <nav class="chapter-stage__nav" aria-label="Secondary">
+          <a class="chapter-stage__link" href="quiz-dashboard.html">Return to Quizzes</a>
+          <a class="chapter-stage__link" href="index.html">Logout</a>
+        </nav>
+      </header>
+      <main class="stage-card stage-card--center" aria-labelledby="lobby-title">
+        <div class="stage-card__panel">
+          <h1 id="lobby-title" class="visually-hidden">Students Joined</h1>
+          <ul class="lobby-list" aria-live="polite">
+            <li>Student 1 has joined...</li>
+            <li>Student 2 has joined...</li>
+            <li>Student 3 has joined...</li>
+            <li>Student 4 has joined...</li>
+            <li>Student 5 has joined...</li>
+            <li>Student 6 has joined...</li>
+            <li>Student 7 has joined...</li>
+            <li>Student 8 has joined...</li>
+            <li>Student 9 has joined...</li>
+          </ul>
+          <button class="stage-card__cta" type="button" data-target="quiz-builder.html">
+            Start Quiz
+          </button>
+        </div>
+      </main>
+    </div>
+    <script src="scripts/app.js" defer></script>
+  </body>
+</html>
